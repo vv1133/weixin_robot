@@ -6,8 +6,9 @@ port = 12233
 session = True
 server = 'tornado'
 
-appid = '************'
-appsecret = '************************'
+wx_config = {}
+wx_config["APP_ID"] = '************'
+wx_config["APP_SECRET"] = '************************'
 
 menu = {
     "button": [

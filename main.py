@@ -6,7 +6,7 @@ import config
 import chat
 
 robot = werobot.WeRoBot(token=config.token, enable_session=config.session)
-client = client.Client(config.appid, config.appsecret)
+client = client.Client(config.wx_config)
 
 
 @robot.handler
