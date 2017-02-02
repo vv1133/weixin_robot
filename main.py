@@ -3,7 +3,7 @@
 import werobot
 from werobot import client
 import config
-import chat
+import brain
 
 robot = werobot.WeRoBot(token=config.token, enable_session=config.session)
 client = client.Client(config.wx_config)
@@ -39,7 +39,7 @@ def click(message, session):
 @robot.text
 def text(message, session):
     print session, message.source, message.time
-    res = chat.chat(message.content)
+    res = brain.run(message.content)
     return u'''%s''' % (res,)
 
 
